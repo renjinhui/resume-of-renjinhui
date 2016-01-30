@@ -61,20 +61,19 @@ html,body{
 
 .header{
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    width: 640px;
     height: 15%;
+    top: 0;
     background-color:#000 ;
-    z-index: 60;
+    z-index: 40;
 }
 .header .hed1{
     position: absolute;
-    width: 101%;
+    width: 100%;
     height: 35%;
     top: 0;
     background:url("images/phonetitle2.gif")no-repeat;
-    background-size: 100%;
+    background-size:100%;
 }
 .header .hed2{
     position: absolute;
@@ -97,10 +96,10 @@ html,body{
     height: 100%;
 }
 @-webkit-keyframes my {
-    0%{transform :rotate(0deg);}
+    0%{-webkit-transform :rotate(0deg);}
     /*25%{transform:rotate(120deg);}*/
     /*50%{transform:rotate(240deg);}*/
-    100%{transform:rotate(360deg);}
+    100%{-webkit-transform:rotate(360deg);}
 
 }
 #hed3{
@@ -110,13 +109,32 @@ html,body{
 }
 #list li{
     width: 100%;
-    height: 100%;
+    height: 85%;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     background-size: cover;
     background-repeat: no-repeat;
 }
+/*#list li:nth-child(1){
+    background-image: url("images/1--bg.jpg");
+}
+#list li:nth-child(2){
+    background-image: url("images/2--bg.jpg");
+    top: -85%;
+    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+    transform: rotateX(120deg);
+    -webkit-transform: rotateX(120deg);
+}
+#list li:nth-child(3){
+    background-image: url("images/3--bg.jpg");
+    bottom: -85%;
+    transform-origin: top;
+    -webkit-transform-origin: top;
+    transform: rotateX(-120deg);
+    -webkit-transform: rotateX(-120deg);
+}*/
 #list li:nth-child(1){
     background-image: url("images/1--bg.jpg");
 }
@@ -137,7 +155,7 @@ html,body{
 }
 #content1,#content2,#content3,#content4,#content5{
     position: absolute;
-    top: 15%;
+    top:10%;
     width: 100%;
     height: 80%;
     text-align: center;
@@ -169,8 +187,8 @@ html,body{
     border-radius: 50%;
 }
 #li1 .cnt12 .moveBoll{
-    transform: none;
-    animation:my 5s infinite linear;
+    -webkit-transform: none;
+    -webkit-animation:my 5s infinite linear;
 }
 
 #content1 .cnt12 .boll{
@@ -216,9 +234,7 @@ html,body{
     position: absolute;
     width: 100%;
     height: 25%;
-    bottom: 0;
-    transform: translate3d(0,0,100px);
-    transition: 1s;
+    bottom: -25%;
 }
 #content1 .cnt13 img{
     width: 100%;
@@ -229,22 +245,26 @@ html,body{
     width:50%;
 }
 #li1 .cnt11 p{
-    animation: flipInY 1s ease 0.7s 1 both;
-    animation-delay: 1s;
+    -webkit-animation: flipInY 1s ease 0.7s 1 both;
+    -webkit-animation-delay: 1s;
 }
 #li1 .cnt11 h3{
-    animation: zoomIn 2s ease 0s 1 both;
+    -webkit-animation: zoomIn 2s ease 0s 1 both;
 }
 #li1 .cnt12 .boll h3{
-    animation: fadeIn 2s ease 3s 1 both;
+    -webkit-animation: fadeIn 2s ease 3s 1 both;
 }
 #li1 .cnt12 .boll p{
-    animation:zoomIn 2s ease 1.5s 1 both;
+    -webkit-animation:zoomIn 2s ease 1.5s 1 both;
 }
 #li1 .cnt13 img{
-    animation:zoomIn 5s ease 0s 1 both;
+    -webkit-animation:myZoomIn 3s ease  0s 1 both;
 }
-
+@-webkit-keyframes myZoomIn {
+    0%{-webkit-transform: scale(1)}
+    50%{-webkit-transform: scale(1.5)}
+    100%{-webkit-transform: scale(1.2)}
+}
 
 
 
@@ -285,16 +305,16 @@ html,body{
     filter:alpha(opacity=100);
 }
 #li2 .cnt21{
-    animation: fadeInLeft 2s ease 0s  both;
+    -webkit-animation: fadeInLeft 2s ease 0s  both;
 }
 #li2 .cnt22{
-    animation:fadeInLeft 2s ease 2s both;
+    -webkit-animation:fadeInLeft 2s ease 2s both;
 }
 #li2 .cnt22 div{
-    animation:fadeInRight 1s ease 2.5s  both;
+    -webkit-animation:fadeInRight 1s ease 2.5s  both;
 }
 #li2 .cnt23{
-    animation:fadeInRight 2s ease 0s  both;
+    -webkit-animation:fadeInRight 2s ease 0s  both;
 }
 
 
@@ -313,19 +333,19 @@ html,body{
     margin-top: 30px;
 }
 #li3 h3:nth-child(1){
-    animation:fadeInRight 1s ease 0s  both;
+    -webkit-animation:fadeInRight 1s ease 0s  both;
 }
 #li3 h3:nth-child(2){
-    animation:fadeInLeft 1s ease 0.7s both;
+    -webkit-animation:fadeInLeft 1s ease 0.7s both;
 }
 #li3 h3:nth-child(3){
-    animation:fadeInRight 1s ease 1.2s  both;
+    -webkit-animation:fadeInRight 1s ease 1.2s  both;
 }
 #li3 h3:nth-child(4){
-    animation:fadeInLeft 1s ease 1.8s both;
+    -webkit-animation:fadeInLeft 1s ease 1.8s both;
 }
 #li3 p {
-    animation:bounceInUp 1s ease 2.4s both;
+    -webkit-animation:bounceInUp 1s ease 2.4s both;
 }
 
 

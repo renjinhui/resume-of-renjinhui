@@ -67,13 +67,13 @@ function move(e){
     console.log(oLis);
     [].forEach.call(oLis,function(){
         arguments[0].className = "";
-        console.log(arguments[0]);
+        //console.log(arguments[0]);
         if(arguments[1]!=index){
             arguments[0].style.display = "none";
         }
-        console.log(arguments[0].firstElementChild);
+        //console.log(arguments[0].firstElementChild);
         arguments[0].firstElementChild.firstElementChild.id="";
-    })
+    });
     if(movePos>0){/*↓*/
         var pos = -winH+movePos;
         this.prevsIndex = (index ==0?oLis.length-1:index-1);//上一张索引
@@ -100,11 +100,10 @@ function end(e){
             this.firstElementChild.firstElementChild.id="li"+(this.index+1);
         },false)
     }
-
 }
 document.addEventListener("touchmove",function(e){
-    console.log(e.target.id);
-},false)
+    //console.log(e.target.id);
+},false);
 
 
 var mus=getEle("#hed3");
@@ -123,5 +122,4 @@ mus.onclick=function(){
         hed3.id="hed3";
         flagM=true;
     }
-
 };
